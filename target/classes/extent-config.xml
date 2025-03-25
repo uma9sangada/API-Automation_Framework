@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entity-mappings xmlns="https://xmlns.jcp.org/xml/ns/persistence/orm"
+                 xmlns:xsi="https://www.w3.org/2001/XMLSchema-instance"
+                 xsi:schemaLocation="https://xmlns.jcp.org/xml/ns/persistence/orm https://xmlns.jcp.org/xml/ns/persistence/orm_2_1.xsd"
+                 version="2.1">
+
+    <entity class="com.example.model.User">
+        <table name="users"/>
+
+        <attributes>
+            <id name="id">
+                <column name="user_id"/>
+                <generated-value strategy="IDENTITY"/>
+            </id>
+
+            <basic name="username">
+                <column name="username" length="50" nullable="false" unique="true"/>
+            </basic>
+
+            <basic name="email">
+                <column name="email" length="100" nullable="false" unique="true"/>
+            </basic>
+
+            <basic name="registrationDate">
+                <column name="registration_date"/>
+                <temporal>TIMESTAMP</temporal>
+            </basic>
+
+            <one-to-many name="orders" mapped-by="user">
+                <cascade>
+                    <cascade-all/>
+                </cascade>
+            </one-to-many>
+        </attributes>
+    </entity>
+
+    <entity class="com.example.model.Order">
+        <table name="orders"/>
+
+        <attributes>
+            <id name="id">
+                <column name="order_id"/>
+                <generated-value strategy="IDENTITY"/>
+            </id>
+
+            <basic name="orderDate">
+                <column name="order_date"/>
+                <temporal>TIMESTAMP</temporal>
+            </basic>
+
+            <many-to-one name="user">
+                <join-column name="user_id"/>
+            </many-to-one>
+        </attributes>
+    </entity>
+
+</entity-mappings>
