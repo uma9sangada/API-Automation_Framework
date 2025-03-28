@@ -1,52 +1,32 @@
 package org.uma.api.services;
 
-import org.uma.api.dto.UserDto;
-import org.uma.api.endpoints.*;
-import org.uma.api.models.User;
+import org.uma.api.model.request.*;
 import org.uma.api.utils.JsonUtils;
 import io.restassured.response.Response;
-import io.restassured.specification.RequestSpecification;
-import static org.uma.api.utils.RequestSpecBuilderUtil.getRequestSpec; // Corrected package name
 
-public class UserService {
+public class UserService extends BaseService {
 
-	private final RequestSpecification requestSpec = getRequestSpec();
+	private static final String BASE_PATH = "/users";
 
-	public Response createUser(UserDto userDto) {
-		String payload = JsonUtils.toJson(userDto);
-		return UserEndpoints.createUser(requestSpec, payload);
+	public Response createUser(UserRequest payload) {
+		return postRequest(payload, BASE_PATH);
 	}
 
-//	public User getUser(int userId) {
-//		Response response = UserEndpoints.getUser(requestSpec, userId);
-//		return response.as(User.class); // Use User.class for consistency
-//	}
+	public Response getUser(int userId) {
+		return getRequest(BASE_PATH + userId);
+	}
 
-//	public Response getUser(int userId) {
-//        return UserEndpoints.getUser(requestSpec, userId);
-//        
-	
-	public Response getUser (int userId) {
-        return UserEndpoints.getUser(requestSpec, userId);
-    }
-        
-	public Response updateUser(int userId, UserDto userDto) {
-		String payload = JsonUtils.toJson(userDto);
-		return UserEndpoints.updateUser(requestSpec, userId, payload);
+	public Response updateUser(int userId, UserRequest user) {
+		String payload = JsonUtils.toJson(user);
+		return putRequest(payload, BASE_PATH + userId);
 	}
 
 	public Response deleteUser(int userId) {
-		return UserEndpoints.deleteUser(requestSpec, userId);
+		return getRequest(BASE_PATH + userId);
 	}
 
-	public User[] getAllUsers() {
-		Response response = UserEndpoints.getAllUsers(requestSpec);
-		return response.as(User[].class); // Use User[].class for consistency
-	}
-
-	public User createUserAndReturnModel(UserDto userDto) {
-		Response response = createUser(userDto);
-		return response.as(User.class); // Use User.class for consistency
+	public Response getAllUsers() {
+		return getRequest(BASE_PATH);
 	}
 
 }
