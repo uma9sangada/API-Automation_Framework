@@ -2,6 +2,8 @@ package org.uma.api.utils;
 
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
+
+import io.restassured.RestAssured;
 import io.restassured.filter.Filter;
 import io.restassured.filter.FilterContext;
 import io.restassured.response.Response;
@@ -12,6 +14,10 @@ public class LoggingFilterUtil implements Filter {
 
 	private static final Logger logger = LogManager.getLogger(LoggingFilterUtil.class);
 
+	 static {
+	        RestAssured.filters(new LoggingFilterUtil());
+	    }
+	
 	@Override
 	public Response filter(FilterableRequestSpecification requestSpec, FilterableResponseSpecification responseSpec,
 			FilterContext ctx) {

@@ -1,0 +1,119 @@
+19:04:10.323 [main] INFO  org.uma.api.utils.LoggingFilterUtil - Request PayLoad:{"id":0,"username":"clarissa.larson","firstName":"Kaycee","lastName":"VonRueden","email":"tabatha.wolff@hotmail.com","password":"lyitxxspwt3","phone":"280-675-7213","userStatus":0}
+19:04:11.872 [main] INFO  org.uma.api.utils.LoggingFilterUtil - STATUS CODE:200
+19:04:11.872 [main] INFO  org.uma.api.utils.LoggingFilterUtil - Response Header :Date=Sat, 29 Mar 2025 13:34:13 GMT
+Content-Type=application/json
+Transfer-Encoding=chunked
+Connection=close
+Access-Control-Allow-Origin=*
+Access-Control-Allow-Methods=GET, POST, DELETE, PUT
+Access-Control-Allow-Headers=Content-Type, api_key, Authorization
+Server=Jetty(9.2.9.v20150224)
+19:04:11.876 [main] INFO  org.uma.api.utils.LoggingFilterUtil - Request Body:{
+    "id": 9223372036854755860,
+    "username": "clarissa.larson",
+    "firstName": "Kaycee",
+    "lastName": "VonRueden",
+    "email": "tabatha.wolff@hotmail.com",
+    "password": "lyitxxspwt3",
+    "phone": "280-675-7213",
+    "userStatus": 0
+}
+19:04:11.885 [main] INFO  org.uma.api.utils.LoggingFilterUtil - STATUS CODE:200
+19:04:11.886 [main] INFO  org.uma.api.utils.LoggingFilterUtil - Response Header :Date=Sat, 29 Mar 2025 13:34:13 GMT
+Content-Type=application/json
+Transfer-Encoding=chunked
+Connection=close
+Access-Control-Allow-Origin=*
+Access-Control-Allow-Methods=GET, POST, DELETE, PUT
+Access-Control-Allow-Headers=Content-Type, api_key, Authorization
+Server=Jetty(9.2.9.v20150224)
+19:04:11.887 [main] INFO  org.uma.api.utils.LoggingFilterUtil - Request Body:{
+    "id": 9223372036854755860,
+    "username": "clarissa.larson",
+    "firstName": "Kaycee",
+    "lastName": "VonRueden",
+    "email": "tabatha.wolff@hotmail.com",
+    "password": "lyitxxspwt3",
+    "phone": "280-675-7213",
+    "userStatus": 0
+}
+19:04:11.977 [main] INFO  org.uma.api.utils.LoggingFilterUtil - BASE URI:https://petstore.swagger.io/v2
+19:04:11.977 [main] INFO  org.uma.api.utils.LoggingFilterUtil - Request Header:Accept=*/*
+Content-Type=application/json
+19:04:11.977 [main] INFO  org.uma.api.utils.LoggingFilterUtil - Request PayLoad:{
+  "id" : 0,
+  "username" : "clarissa.larson",
+  "firstName" : "Felipe",
+  "lastName" : "VonRueden",
+  "email" : "jeromy.rutherford@gmail.com",
+  "password" : "lyitxxspwt3",
+  "phone" : "280-675-7213",
+  "userStatus" : 0
+}
+19:04:11.978 [main] INFO  org.uma.api.utils.LoggingFilterUtil - BASE URI:https://petstore.swagger.io/v2
+19:04:11.979 [main] INFO  org.uma.api.utils.LoggingFilterUtil - Request Header:Accept=*/*
+Content-Type=application/json
+19:04:11.979 [main] INFO  org.uma.api.utils.LoggingFilterUtil - Request PayLoad:{
+  "id" : 0,
+  "username" : "clarissa.larson",
+  "firstName" : "Felipe",
+  "lastName" : "VonRueden",
+  "email" : "jeromy.rutherford@gmail.com",
+  "password" : "lyitxxspwt3",
+  "phone" : "280-675-7213",
+  "userStatus" : 0
+}
+19:04:13.714 [main] INFO  org.uma.api.utils.LoggingFilterUtil - STATUS CODE:200
+19:04:13.714 [main] INFO  org.uma.api.utils.LoggingFilterUtil - Response Header :Date=Sat, 29 Mar 2025 13:34:14 GMT
+Content-Type=application/json
+Transfer-Encoding=chunked
+Connection=keep-alive
+Access-Control-Allow-Origin=*
+Access-Control-Allow-Methods=GET, POST, DELETE, PUT
+Access-Control-Allow-Headers=Content-Type, api_key, Authorization
+Server=Jetty(9.2.9.v20150224)
+19:04:13.716 [main] INFO  org.uma.api.utils.LoggingFilterUtil - Request Body:{
+    "code": 200,
+    "type": "unknown",
+    "message": "9223372036854747337"
+}
+19:04:13.716 [main] INFO  org.uma.api.utils.LoggingFilterUtil - STATUS CODE:200
+19:04:13.716 [main] INFO  org.uma.api.utils.LoggingFilterUtil - Response Header :Date=Sat, 29 Mar 2025 13:34:14 GMT
+Content-Type=application/json
+Transfer-Encoding=chunked
+Connection=keep-alive
+Access-Control-Allow-Origin=*
+Access-Control-Allow-Methods=GET, POST, DELETE, PUT
+Access-Control-Allow-Headers=Content-Type, api_key, Authorization
+Server=Jetty(9.2.9.v20150224)
+19:04:13.717 [main] INFO  org.uma.api.utils.LoggingFilterUtil - Request Body:{
+    "code": 200,
+    "type": "unknown",
+    "message": "9223372036854747337"
+}
+19:04:13.728 [main] INFO  org.uma.api.utils.LoggingFilterUtil - BASE URI:https://petstore.swagger.io/v2
+19:04:13.728 [main] INFO  org.uma.api.utils.LoggingFilterUtil - Request Header:Accept=*/*
+Content-Type=application/json
+19:04:13.728 [main] INFO  org.uma.api.utils.LoggingFilterUtil - Request PayLoad:{
+  "id" : 0,
+  "username" : "clarissa.larson",
+  "firstName" : "Felipe",
+  "lastName" : "VonRueden",
+  "email" : "jeromy.rutherford@gmail.com",
+  "password" : "lyitxxspwt3",
+  "phone" : "280-675-7213",
+  "userStatus" : 0
+}
+19:04:13.731 [main] INFO  org.uma.api.utils.LoggingFilterUtil - BASE URI:https://petstore.swagger.io/v2
+19:04:13.731 [main] INFO  org.uma.api.utils.LoggingFilterUtil - Request Header:Accept=*/*
+Content-Type=application/json
+19:04:13.731 [main] INFO  org.uma.api.utils.LoggingFilterUtil - Request PayLoad:{
+  "id" : 0,
+  "username" : "clarissa.larson",
+  "firstName" : "Felipe",
+  "lastName" : "VonRueden",
+  "email" : "jeromy.rutherford@gmail.com",
+  "password" : "lyitxxspwt3",
+  "phone" : "280-675-7213",
+  "userStatus" : 0
+}
