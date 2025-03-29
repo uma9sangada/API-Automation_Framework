@@ -1,104 +1,128 @@
 package org.uma.api.utils;
 
-import java.text.SimpleDateFormat;
-import java.util.Date;
+import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
+import java.util.Arrays;
+import java.util.List;
 
-import org.apache.logging.log4j.LogManager;
-import org.apache.logging.log4j.Logger;
 import org.testng.ITestContext;
+import org.testng.ITestListener;
 import org.testng.ITestResult;
-import org.testng.annotations.BeforeSuite;
-import org.testng.annotations.Test;
 
 import com.aventstack.extentreports.ExtentReports;
 import com.aventstack.extentreports.ExtentTest;
-import com.aventstack.extentreports.Status;
+import com.aventstack.extentreports.markuputils.CodeLanguage;
+import com.aventstack.extentreports.markuputils.ExtentColor;
+import com.aventstack.extentreports.markuputils.MarkupHelper;
 import com.aventstack.extentreports.reporter.ExtentSparkReporter;
-import com.aventstack.extentreports.reporter.configuration.Theme;
 
-import io.restassured.response.Response;
+import io.restassured.http.Header;
 
-public class ReportManager {
+public class ReportManager implements ITestListener {
 
-    public ExtentSparkReporter sparkReporter;
-    public ExtentReports extent;
-    public ExtentTest test;
+    private static ExtentReports extentReports;
+    private ExtentSparkReporter sparkReporter;
+    private static ThreadLocal<ExtentTest> extentTest = new ThreadLocal<>();
 
-    String repName;
-    private static final Logger logger = LogManager.getLogger(ReportManager.class);
-
-    @BeforeSuite
+    @Override
     public void onStart(ITestContext testContext) {
+        DateTimeFormatter dateTimeFormatter = DateTimeFormatter.ofPattern("yyyy_MM_dd_HH_mm_ss");
+        LocalDateTime localDateTime = LocalDateTime.now();
+        String formattedTime = dateTimeFormatter.format(localDateTime);
+        String reportName = "TestReport" + formattedTime + ".html";
+        String fullReportPath = System.getProperty("user.dir") + "\\test-reports\\" + reportName;
 
-        String timeStamp = new SimpleDateFormat("yyyy.MM.dd.HH.mm.ss").format(new Date()); // time stamp
-        repName = "Test-Report-" + timeStamp + ".html";
+        sparkReporter = new ExtentSparkReporter(fullReportPath);
+        sparkReporter.config().setDocumentTitle("RestAssuredAutomationProject");
+        sparkReporter.config().setReportName("Pet Store Users API");
 
-        sparkReporter = new ExtentSparkReporter(".\\test-reports\\" + repName); // specify location of the report
-
-        sparkReporter.config().setDocumentTitle("RestAssuredAutomationProject"); // Title of report
-        sparkReporter.config().setReportName("Pet Store Users API"); // name of the report
-
-        sparkReporter.config().setTheme(Theme.DARK);
-
-        extent = new ExtentReports();
-        extent.attachReporter(sparkReporter);
-
-        extent.setSystemInfo("Application", "Pest Store Users API");
-        extent.setSystemInfo("Operating System", System.getProperty("os.name"));
-        extent.setSystemInfo("User Name", System.getProperty("user.name"));
-        extent.setSystemInfo("Environemnt", "QA");
-
-        extent.setSystemInfo("ucon", "navan"); // Potential typo: "Pest" instead of "Pet"
+        extentReports = new ExtentReports();
+        extentReports.attachReporter(sparkReporter);
+        extentReports.setSystemInfo("Application", "Pest Store Users API");
+        extentReports.setSystemInfo("Operating System", System.getProperty("os.name"));
+        extentReports.setSystemInfo("User Name", System.getProperty("user.name"));
+        extentReports.setSystemInfo("Environment", "QA");
     }
 
-    @Test
+    @Override
+    public void onTestStart(ITestResult result) {
+        ExtentTest test = extentReports.createTest(result.getMethod().getMethodName());
+        extentTest.set(test);
+    }
+
+    @Override
     public void onTestSuccess(ITestResult result) {
-
-        test = extent.createTest(result.getName());
-        test.assignCategory(result.getMethod().getGroups());
-
-        test.createNode(result.getName());
-        test.log(Status.PASS, "Test Passed");
+        logPassDetails("Test Passed");
     }
 
+    @Override
     public void onTestFailure(ITestResult result) {
-
-        test = extent.createTest(result.getName());
-        test.createNode(result.getName());
-
-        test.assignCategory(result.getMethod().getGroups());
-        test.log(Status.FAIL, "Test Failed");
-        test.log(Status.FAIL, result.getThrowable().getMessage());
+        logFailureDetails(result.getThrowable().getMessage());
+        String stackTrace = Arrays.toString(result.getThrowable().getStackTrace());
+        stackTrace = stackTrace.replaceAll(",", "<br>");
+        String formattedTrace = "<details>\n" +
+                "    <summary>Click Here To See Exception Logs</summary>\n" +
+                "    " + stackTrace + "\n" +
+                "</details>\n";
+        logExceptionDetails(formattedTrace);
     }
 
-    public void onTestSkipped(ITestResult result) {
-
-        test = extent.createTest(result.getName());
-        test.createNode(result.getName());
-
-        test.assignCategory(result.getMethod().getGroups());
-        test.log(Status.SKIP, "Test Skipped");
-        test.log(Status.SKIP, result.getThrowable().getMessage());
+    public static void logPassDetails(String log) {
+        ExtentTest test = extentTest.get();
+        if (test != null) {
+            test.pass(MarkupHelper.createLabel(log, ExtentColor.GREEN));
+        }
     }
 
-    public void onFinish(ITestContext testContext) {
-        extent.flush();
+    public static void logFailureDetails(String log) {
+        ExtentTest test = extentTest.get();
+        if (test != null) {
+            test.fail(MarkupHelper.createLabel(log, ExtentColor.RED));
+        }
     }
 
-    // Add this method to log the response in the Extent Report
-    public void logResponseToReport(Response response, ITestResult result) {
-        if (test != null) { // Check if a test is currently running
-            test.log(Status.INFO, "Response Status Code: " + response.getStatusCode());
-            test.log(Status.INFO, "Response Headers: " + response.headers().toString());
-            test.log(Status.INFO, "Response Body: <pre>" + response.getBody().prettyPrint() + "</pre>"); // Use <pre> for formatted output
-            if (result.getStatus() == ITestResult.FAILURE){
-                test.log(Status.FAIL, "Test Failed with response");
-            } else if (result.getStatus() == ITestResult.SUCCESS) {
-                test.log(Status.PASS, "Test Passed with response");
-            }
+    public static void logExceptionDetails(String log) {
+        ExtentTest test = extentTest.get();
+        if (test != null) {
+            test.fail(log);
+        }
+    }
 
-        } else {
-            logger.warn("Response logging attempted outside of a test context.");
+    public static void logInfoDetails(String log) {
+        ExtentTest test = extentTest.get();
+        if (test != null) {
+            test.info(MarkupHelper.createLabel(log, ExtentColor.GREY));
+        }
+    }
+
+    public static void logJson(String json) {
+        ExtentTest test = extentTest.get();
+        if (test != null) {
+            test.info(MarkupHelper.createCodeBlock(json, CodeLanguage.JSON));
+        }
+    }
+
+    public static void logHeaders(List<Header> headersList) {
+        ExtentTest test = extentTest.get();
+        if (test != null) {
+            String[][] arrayHeaders = headersList.stream()
+                    .map(header -> new String[]{header.getName(), header.getValue()})
+                    .toArray(String[][]::new);
+            test.info(MarkupHelper.createTable(arrayHeaders));
+        }
+    }
+
+    public static void logWarningDetails(String log) {
+        ExtentTest test = extentTest.get();
+        if (test != null) {
+            test.warning(MarkupHelper.createLabel(log, ExtentColor.YELLOW));
+        }
+    }
+
+    @Override
+    public void onFinish(ITestContext context) {
+        if (extentReports != null) {
+            extentReports.flush();
         }
     }
 }

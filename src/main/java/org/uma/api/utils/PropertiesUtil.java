@@ -12,7 +12,11 @@ public class PropertiesUtil {
 
 	public static String readProperty(String propertyName) {
 		System.out.println(System.getProperty("user.dir"));
-		File propFile = new File(System.getProperty("user.dir") + "//config//" + ".properties");
+		String relativePath = "src/main/resources/Configuration.properties";
+
+        // Create the File object using the relative path.
+        File propFile = new File(System.getProperty("user.dir"), relativePath);
+
 		FileReader fileReader = null;
 		Properties properties = new Properties();
 		try {

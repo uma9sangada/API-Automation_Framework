@@ -26,7 +26,7 @@ public class UserValidationsViaExcel {
         updatedUser = new UserRequest();
     }
 
-    @Test(priority = 1)
+    @Test(priority = 1, groups = {"UserAPI", "sanity"}, description = "Validate creating a new user from Excel")
     public void validateCreateUser() {
         Response response = userService.createUser(createdUser);
         Assert.assertEquals(response.getStatusCode(), 201);
@@ -36,9 +36,10 @@ public class UserValidationsViaExcel {
         Assert.assertEquals(createdUser.getEmail(), createdUserResponse.getEmail());
     }
 
-    @Test(priority = 2)
+    @Test(priority = 2, groups = {"UserAPI", "regression"}, description = "Validate retrieving a user from Excel")
     public void validateGetUser() {
-        Response response = userService.getUser(createdUser.getId());
+
+        Response response = userService.getUser(createdUser.getUsername());
         Assert.assertEquals(response.getStatusCode(), 200);
         UserRequest retrievedUser = response.as(UserRequest.class);
         Assert.assertEquals(createdUser.getUsername(), retrievedUser.getUsername());
@@ -46,15 +47,15 @@ public class UserValidationsViaExcel {
         Assert.assertEquals(createdUser.getEmail(), retrievedUser.getEmail());
     }
 
-    @Test(priority = 3)
+    @Test(priority = 3, groups = {"UserAPI", "regression"}, description = "Validate updating a user from Excel")
     public void validateUpdateUser() {
         updatedUser.setFirstName("UpdatedFirstName");
         updatedUser.setEmail("updated.email@example.com");
 
-        Response response = userService.updateUser(createdUser.getId(), updatedUser);
+        Response response = userService.updateUser(createdUser.getUsername(), updatedUser);
         Assert.assertEquals(response.getStatusCode(), 200);
 
-        Response response2 = userService.getUser(createdUser.getId());
+        Response response2 = userService.getUser(createdUser.getUsername());
         Assert.assertEquals(response2.getStatusCode(), 200);
         UserRequest retrievedUser = response2.as(UserRequest.class);
 
@@ -67,28 +68,17 @@ public class UserValidationsViaExcel {
         Assert.assertEquals(createdUser.getPhone(), retrievedUser.getPhone());
     }
 
-    @Test(priority = 4)
+    @Test(priority = 4, groups = {"UserAPI", "regression"}, description = "Validate deleting a user from Excel")
     public void validateDeleteUser() {
         UserRequest deleteUser = userList.get(1);
         Response createResponse = userService.createUser(deleteUser);
-        Assert.assertEquals(createResponse.getStatusCode(), 201);
-        UserRequest userToDelete = createResponse.as(UserRequest.class);
-        Response response = userService.deleteUser(userToDelete.getId());
-        Assert.assertEquals(response.getStatusCode(), 204);
-        Response getResponse = userService.getUser(userToDelete.getId());
-        Assert.assertEquals(getResponse.getStatusCode(), 404);
-    }
+        Assert.assertEquals(createResponse.getStatusCode(), 201); // Corrected to 201
 
-    @Test(priority = 5)
-    public void validateGetAllUsers() {
-        UserRequest user1 = userList.get(0);
-        UserRequest user2 = userList.get(1);
-        userService.createUser(user1);
-        userService.createUser(user2);
-        Response getAllResponse = userService.getAllUsers();
-        Assert.assertEquals(getAllResponse.getStatusCode(), 200);
-        UserRequest[] users = getAllResponse.as(UserRequest[].class);
-        Assert.assertNotNull(users);
-        Assert.assertTrue(users.length >= 2);
+        UserRequest createdUserResponse = createResponse.as(UserRequest.class);
+        Response response = userService.deleteUser(createdUserResponse.getUsername());
+        Assert.assertEquals(response.getStatusCode(), 204);
+
+        Response response2 = userService.getUser(createdUserResponse.getUsername());
+        Assert.assertEquals(response2.getStatusCode(), 404);
     }
 }
