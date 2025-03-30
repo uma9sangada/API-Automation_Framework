@@ -15,11 +15,10 @@ public class BaseService {
 
 	protected RequestSpecification requestSpecification;
 
-	
-	 static {
-	        RestAssured.filters(new LoggingFilterUtil());
-	    }
-	
+	static {
+		RestAssured.filters(new LoggingFilterUtil());
+	}
+
 	public BaseService() {
 
 		String baseUrl = PropertiesUtil.readProperty("BASE_URL");
@@ -42,6 +41,26 @@ public class BaseService {
 		return response;
 	}
 
+	protected Response postRequest(Object payload, String endpoint, String token) {
+
+		requestSpecification = requestSpecification.header("Authorization", token).contentType("multipart/form-data")
+				.body(payload);
+		Response response = requestSpecification.post(endpoint);
+		printRequestLogInReport(requestSpecification);
+		printResponseLogInReport(response);
+		return response;
+	}
+	
+	protected Response postRequest(RequestSpecification reqspec, String endpoint, String token) {
+
+		requestSpecification = reqspec.header("Authorization", token).contentType("multipart/form-data");
+				
+		Response response = requestSpecification.post(endpoint);
+		printRequestLogInReport(requestSpecification);
+		printResponseLogInReport(response);
+		return response;
+	}
+
 	protected Response putRequest(Object payload, String endpoint) {
 		requestSpecification = requestSpecification.contentType(ContentType.JSON).body(payload);
 		Response response = requestSpecification.put(endpoint);
@@ -54,6 +73,25 @@ public class BaseService {
 	protected Response getRequest(String endpoint) {
 
 		Response response = requestSpecification.get(endpoint);
+		printRequestLogInReport(requestSpecification);
+		printResponseLogInReport(response);
+		return response;
+
+	}
+	
+	
+	protected Response getRequest(String endpoint, String token) {
+		requestSpecification = requestSpecification.header("Authorization", token);
+		Response response = requestSpecification.delete(endpoint);
+		printRequestLogInReport(requestSpecification);
+		printResponseLogInReport(response);
+		return response;
+
+	}
+
+	protected Response deleteRequest(String endpoint, String token) {
+		requestSpecification = requestSpecification.header("Authorization", token);
+		Response response = requestSpecification.delete(endpoint);
 		printRequestLogInReport(requestSpecification);
 		printResponseLogInReport(response);
 		return response;

@@ -25,6 +25,12 @@
     <version>7.21.1</version>
 </dependency>
 
+<dependency>
+    <groupId>io.rest-assured</groupId>
+    <artifactId>json-schema-validator</artifactId>
+    <version>5.3.0</version> 
+</dependency>
+
 <!-- https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-java -->
 <dependency>
     <groupId>org.seleniumhq.selenium</groupId>
@@ -149,5 +155,68 @@
 </dependency>
 
   </dependencies>
+  
+ 
+<profiles>
+   <profile>
+      <id>Regression</id>
+      <build>
+         <pluginManagement>
+            <plugins>
+               <plugin>
+                  <groupId>org.apache.maven.plugins</groupId>
+                  <artifactId>maven-surefire-plugin</artifactId>
+                  <version>3.2.5</version>
+                  <configuration>
+                     <suiteXmlFiles>
+                        <suiteXmlFile>testng.xml</suiteXmlFile>
+                     </suiteXmlFiles>
+                  </configuration>
+               </plugin>
+            </plugins>
+         </pluginManagement>
+      </build>
+   </profile>
+   <profile>
+      <id>sanity</id>
+      <build>
+         <pluginManagement>
+            <plugins>
+               <plugin>
+                  <groupId>org.apache.maven.plugins</groupId>
+                  <artifactId>maven-surefire-plugin</artifactId>
+                  <version>3.2.5</version>
+                  <configuration>
+                     <suiteXmlFiles>
+                        <suiteXmlFile>purchase.xml</suiteXmlFile>
+                     </suiteXmlFiles>
+                  </configuration>
+               </plugin>
+            </plugins>
+         </pluginManagement>
+      </build>
+   </profile>
+   <profile>
+      <id>errorvalidation</id>
+      <build>
+         <pluginManagement>
+            <plugins>
+               <plugin>
+                  <groupId>org.apache.maven.plugins</groupId>
+                  <artifactId>maven-surefire-plugin</artifactId>
+                  <version>3.2.5</version>
+                  <configuration>
+                     <suiteXmlFiles>
+                        <suiteXmlFile>errorhandling.xml</suiteXmlFile>
+                     </suiteXmlFiles>
+                  </configuration>
+               </plugin>
+            </plugins>
+         </pluginManagement>
+      </build>
+   </profile>
+</profiles>
+  
+  
   
 </project>

@@ -3,13 +3,14 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="org.uma.api.validations.UserValidations">
+      <class name="org.uma.api.validations.EcommerceValidation">
         <methods>
-          <include name="setupTestData"/>
-          <include name="validateUpdateUser"/>
-          <include name="validateDeleteUser"/>
+          <include name="validatePostOrder"/>
+          <include name="validateGetProduct"/>
+          <include name="validateDeleteProduct"/>
+          <include name="validatePostProduct"/>
         </methods>
-      </class> <!-- org.uma.api.validations.UserValidations -->
+      </class> <!-- org.uma.api.validations.EcommerceValidation -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
