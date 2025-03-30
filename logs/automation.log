@@ -1,102 +1,25 @@
-19:04:15.558 [main] INFO  org.uma.api.utils.LoggingFilterUtil - STATUS CODE:200
-19:04:15.572 [main] INFO  org.uma.api.utils.LoggingFilterUtil - Response Header :Date=Sat, 29 Mar 2025 13:34:16 GMT
-Content-Type=application/json
-Transfer-Encoding=chunked
-Connection=close
+13:48:54.855 [main] INFO  org.uma.api.utils.LoggingFilterUtil - STATUS CODE:200
+13:48:54.870 [main] INFO  org.uma.api.utils.LoggingFilterUtil - Response Header :Date=Sun, 30 Mar 2025 08:18:56 GMT
+Server=Apache/2.4.52 (Ubuntu)
+Content-Security-Policy=default-src 'self';base-uri 'self';block-all-mixed-content;font-src 'self' https: data:;frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests
+X-DNS-Prefetch-Control=off
+Expect-CT=max-age=0
+X-Frame-Options=SAMEORIGIN
+Strict-Transport-Security=max-age=15552000; includeSubDomains
+X-Download-Options=noopen
+X-Content-Type-Options=nosniff
+X-Permitted-Cross-Domain-Policies=none
+Referrer-Policy=no-referrer
+X-XSS-Protection=0
 Access-Control-Allow-Origin=*
-Access-Control-Allow-Methods=GET, POST, DELETE, PUT
-Access-Control-Allow-Headers=Content-Type, api_key, Authorization
-Server=Jetty(9.2.9.v20150224)
-19:04:15.574 [main] INFO  org.uma.api.utils.LoggingFilterUtil - Request Body:{
-    "id": 9223372036854755860,
-    "username": "clarissa.larson",
-    "firstName": "Kaycee",
-    "lastName": "VonRueden",
-    "email": "tabatha.wolff@hotmail.com",
-    "password": "lyitxxspwt3",
-    "phone": "280-675-7213",
-    "userStatus": 0
-}
-19:04:15.576 [main] INFO  org.uma.api.utils.LoggingFilterUtil - STATUS CODE:200
-19:04:15.576 [main] INFO  org.uma.api.utils.LoggingFilterUtil - Response Header :Date=Sat, 29 Mar 2025 13:34:16 GMT
-Content-Type=application/json
-Transfer-Encoding=chunked
-Connection=close
-Access-Control-Allow-Origin=*
-Access-Control-Allow-Methods=GET, POST, DELETE, PUT
-Access-Control-Allow-Headers=Content-Type, api_key, Authorization
-Server=Jetty(9.2.9.v20150224)
-19:04:15.577 [main] INFO  org.uma.api.utils.LoggingFilterUtil - Request Body:{
-    "id": 9223372036854755860,
-    "username": "clarissa.larson",
-    "firstName": "Kaycee",
-    "lastName": "VonRueden",
-    "email": "tabatha.wolff@hotmail.com",
-    "password": "lyitxxspwt3",
-    "phone": "280-675-7213",
-    "userStatus": 0
-}
-19:04:15.624 [main] INFO  org.uma.api.utils.LoggingFilterUtil - BASE URI:https://petstore.swagger.io/v2
-19:04:15.624 [main] INFO  org.uma.api.utils.LoggingFilterUtil - Request Header:Accept=*/*
-Content-Type=application/json
-19:04:15.624 [main] INFO  org.uma.api.utils.LoggingFilterUtil - Request PayLoad:{
-  "id" : 0,
-  "username" : "clarissa.larson",
-  "firstName" : "Felipe",
-  "lastName" : "VonRueden",
-  "email" : "jeromy.rutherford@gmail.com",
-  "password" : "lyitxxspwt3",
-  "phone" : "280-675-7213",
-  "userStatus" : 0
-}
-19:04:15.626 [main] INFO  org.uma.api.utils.LoggingFilterUtil - BASE URI:https://petstore.swagger.io/v2
-19:04:15.626 [main] INFO  org.uma.api.utils.LoggingFilterUtil - Request Header:Accept=*/*
-Content-Type=application/json
-19:04:15.626 [main] INFO  org.uma.api.utils.LoggingFilterUtil - Request PayLoad:{
-  "id" : 0,
-  "username" : "clarissa.larson",
-  "firstName" : "Felipe",
-  "lastName" : "VonRueden",
-  "email" : "jeromy.rutherford@gmail.com",
-  "password" : "lyitxxspwt3",
-  "phone" : "280-675-7213",
-  "userStatus" : 0
-}
-19:04:17.094 [main] INFO  org.uma.api.utils.LoggingFilterUtil - STATUS CODE:200
-19:04:17.094 [main] INFO  org.uma.api.utils.LoggingFilterUtil - Response Header :Date=Sat, 29 Mar 2025 13:34:18 GMT
-Content-Type=application/json
-Transfer-Encoding=chunked
-Connection=close
-Access-Control-Allow-Origin=*
-Access-Control-Allow-Methods=GET, POST, DELETE, PUT
-Access-Control-Allow-Headers=Content-Type, api_key, Authorization
-Server=Jetty(9.2.9.v20150224)
-19:04:17.097 [main] INFO  org.uma.api.utils.LoggingFilterUtil - Request Body:{
-    "id": 9223372036854755860,
-    "username": "clarissa.larson",
-    "firstName": "Kaycee",
-    "lastName": "VonRueden",
-    "email": "tabatha.wolff@hotmail.com",
-    "password": "lyitxxspwt3",
-    "phone": "280-675-7213",
-    "userStatus": 0
-}
-19:04:17.097 [main] INFO  org.uma.api.utils.LoggingFilterUtil - STATUS CODE:200
-19:04:17.097 [main] INFO  org.uma.api.utils.LoggingFilterUtil - Response Header :Date=Sat, 29 Mar 2025 13:34:18 GMT
-Content-Type=application/json
-Transfer-Encoding=chunked
-Connection=close
-Access-Control-Allow-Origin=*
-Access-Control-Allow-Methods=GET, POST, DELETE, PUT
-Access-Control-Allow-Headers=Content-Type, api_key, Authorization
-Server=Jetty(9.2.9.v20150224)
-19:04:17.098 [main] INFO  org.uma.api.utils.LoggingFilterUtil - Request Body:{
-    "id": 9223372036854755860,
-    "username": "clarissa.larson",
-    "firstName": "Kaycee",
-    "lastName": "VonRueden",
-    "email": "tabatha.wolff@hotmail.com",
-    "password": "lyitxxspwt3",
-    "phone": "280-675-7213",
-    "userStatus": 0
+Content-Type=application/json; charset=utf-8
+Content-Length=362
+ETag=W/"16a-L1VyQKfHzBiLmGs3eCScxWiracw"
+Vary=Accept-Encoding
+Keep-Alive=timeout=5, max=100
+Connection=Keep-Alive
+13:48:54.873 [main] INFO  org.uma.api.utils.LoggingFilterUtil - Request Body:{
+    "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NjQ1OGRmN2E4NmY4Zjc0ZGNlNTAyMDgiLCJ1c2VyRW1haWwiOiJ1bWFzYW5nYWRhOThAZ21haWwuY29tIiwidXNlck1vYmlsZSI6MTIzNDU2Nzg5MCwidXNlclJvbGUiOiJjdXN0b21lciIsImlhdCI6MTc0MzMyMjczNiwiZXhwIjoxNzc0ODgwMzM2fQ.aYTCNrTduhfADAfdULWP4l7O7HWsg2JsM30uo3ZR-0k",
+    "userId": "66458df7a86f8f74dce50208",
+    "message": "Login Successfully"
 }

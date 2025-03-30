@@ -1,0 +1,88 @@
+13:40:18.183 [main] INFO  org.uma.api.utils.LoggingFilterUtil - Request Body:{
+    "message": "Email is required"
+}
+13:43:40.015 [main] INFO  org.uma.api.utils.LoggingFilterUtil - BASE URI:https://rahulshettyacademy.com/api/ecom
+13:43:40.030 [main] INFO  org.uma.api.utils.LoggingFilterUtil - Request Header:Accept=*/*
+Content-Type=application/json
+13:43:40.030 [main] INFO  org.uma.api.utils.LoggingFilterUtil - Request PayLoad:{"username":"umasangada98@gmail.com","password":"T@bby23519"}
+13:43:40.035 [main] INFO  org.uma.api.utils.LoggingFilterUtil - BASE URI:https://rahulshettyacademy.com/api/ecom
+13:43:40.035 [main] INFO  org.uma.api.utils.LoggingFilterUtil - Request Header:Accept=*/*
+Content-Type=application/json
+13:43:40.037 [main] INFO  org.uma.api.utils.LoggingFilterUtil - Request PayLoad:{"username":"umasangada98@gmail.com","password":"T@bby23519"}
+13:43:45.107 [main] INFO  org.uma.api.utils.LoggingFilterUtil - STATUS CODE:400
+13:43:45.107 [main] INFO  org.uma.api.utils.LoggingFilterUtil - Response Header :Date=Sun, 30 Mar 2025 08:13:46 GMT
+Server=Apache/2.4.52 (Ubuntu)
+Content-Security-Policy=default-src 'self';base-uri 'self';block-all-mixed-content;font-src 'self' https: data:;frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests
+X-DNS-Prefetch-Control=off
+Expect-CT=max-age=0
+X-Frame-Options=SAMEORIGIN
+Strict-Transport-Security=max-age=15552000; includeSubDomains
+X-Download-Options=noopen
+X-Content-Type-Options=nosniff
+X-Permitted-Cross-Domain-Policies=none
+Referrer-Policy=no-referrer
+X-XSS-Protection=0
+Access-Control-Allow-Origin=*
+Content-Type=application/json; charset=utf-8
+Content-Length=31
+ETag=W/"1f-Y5TAqROqjsvPbDYsCc/9QEESk7g"
+Vary=Accept-Encoding
+Connection=close
+13:43:45.419 [main] INFO  org.uma.api.utils.LoggingFilterUtil - Request Body:{
+    "message": "Email is required"
+}
+13:43:45.419 [main] INFO  org.uma.api.utils.LoggingFilterUtil - STATUS CODE:400
+13:43:45.420 [main] INFO  org.uma.api.utils.LoggingFilterUtil - Response Header :Date=Sun, 30 Mar 2025 08:13:46 GMT
+Server=Apache/2.4.52 (Ubuntu)
+Content-Security-Policy=default-src 'self';base-uri 'self';block-all-mixed-content;font-src 'self' https: data:;frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests
+X-DNS-Prefetch-Control=off
+Expect-CT=max-age=0
+X-Frame-Options=SAMEORIGIN
+Strict-Transport-Security=max-age=15552000; includeSubDomains
+X-Download-Options=noopen
+X-Content-Type-Options=nosniff
+X-Permitted-Cross-Domain-Policies=none
+Referrer-Policy=no-referrer
+X-XSS-Protection=0
+Access-Control-Allow-Origin=*
+Content-Type=application/json; charset=utf-8
+Content-Length=31
+ETag=W/"1f-Y5TAqROqjsvPbDYsCc/9QEESk7g"
+Vary=Accept-Encoding
+Connection=close
+13:43:45.422 [main] INFO  org.uma.api.utils.LoggingFilterUtil - Request Body:{
+    "message": "Email is required"
+}
+13:48:53.566 [main] INFO  org.uma.api.utils.LoggingFilterUtil - BASE URI:https://rahulshettyacademy.com/api/ecom
+13:48:53.570 [main] INFO  org.uma.api.utils.LoggingFilterUtil - Request Header:Accept=*/*
+Content-Type=application/json
+13:48:53.570 [main] INFO  org.uma.api.utils.LoggingFilterUtil - Request PayLoad:{"userEmail":"umasangada98@gmail.com","userPassword":"T@bby23519"}
+13:48:53.572 [main] INFO  org.uma.api.utils.LoggingFilterUtil - BASE URI:https://rahulshettyacademy.com/api/ecom
+13:48:53.572 [main] INFO  org.uma.api.utils.LoggingFilterUtil - Request Header:Accept=*/*
+Content-Type=application/json
+13:48:53.572 [main] INFO  org.uma.api.utils.LoggingFilterUtil - Request PayLoad:{"userEmail":"umasangada98@gmail.com","userPassword":"T@bby23519"}
+13:48:54.779 [main] INFO  org.uma.api.utils.LoggingFilterUtil - STATUS CODE:200
+13:48:54.779 [main] INFO  org.uma.api.utils.LoggingFilterUtil - Response Header :Date=Sun, 30 Mar 2025 08:18:56 GMT
+Server=Apache/2.4.52 (Ubuntu)
+Content-Security-Policy=default-src 'self';base-uri 'self';block-all-mixed-content;font-src 'self' https: data:;frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests
+X-DNS-Prefetch-Control=off
+Expect-CT=max-age=0
+X-Frame-Options=SAMEORIGIN
+Strict-Transport-Security=max-age=15552000; includeSubDomains
+X-Download-Options=noopen
+X-Content-Type-Options=nosniff
+X-Permitted-Cross-Domain-Policies=none
+Referrer-Policy=no-referrer
+X-XSS-Protection=0
+Access-Control-Allow-Origin=*
+Content-Type=application/json; charset=utf-8
+Content-Length=362
+ETag=W/"16a-L1VyQKfHzBiLmGs3eCScxWiracw"
+Vary=Accept-Encoding
+Keep-Alive=timeout=5, max=100
+Connection=Keep-Alive
+13:48:54.855 [main] INFO  org.uma.api.utils.LoggingFilterUtil - Request Body:{
+    "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NjQ1OGRmN2E4NmY4Zjc0ZGNlNTAyMDgiLCJ1c2VyRW1haWwiOiJ1bWFzYW5nYWRhOThAZ21haWwuY29tIiwidXNlck1vYmlsZSI6MTIzNDU2Nzg5MCwidXNlclJvbGUiOiJjdXN0b21lciIsImlhdCI6MTc0MzMyMjczNiwiZXhwIjoxNzc0ODgwMzM2fQ.aYTCNrTduhfADAfdULWP4l7O7HWsg2JsM30uo3ZR-0k",
+    "userId": "66458df7a86f8f74dce50208",
+    "message": "Login Successfully"
+}

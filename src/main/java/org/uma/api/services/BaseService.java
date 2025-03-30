@@ -41,6 +41,17 @@ public class BaseService {
 		printResponseLogInReport(response);
 		return response;
 	}
+	
+	protected Response postRequest(Object payload, String endpoint,String token) {
+
+		requestSpecification = requestSpecification.header("Authorization",token).
+				contentType(ContentType.JSON).body(payload);
+		Response response = requestSpecification.post(endpoint);
+		printRequestLogInReport(requestSpecification);
+		printResponseLogInReport(response);
+		return response;
+	}
+
 
 	protected Response putRequest(Object payload, String endpoint) {
 		requestSpecification = requestSpecification.contentType(ContentType.JSON).body(payload);

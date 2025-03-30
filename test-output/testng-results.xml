@@ -1,89 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="4" passed="3" failed="1" skipped="0">
+<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2025-03-29T19:04:06 IST" name="Suite" finished-at="2025-03-29T19:04:17 IST" duration-ms="11009">
+  <suite started-at="2025-03-30T13:48:52 IST" name="Default suite" finished-at="2025-03-30T13:48:54 IST" duration-ms="2410">
     <groups>
-      <group name="regression">
-        <method signature="UserValidations.validateGetUser()[pri:2, instance:org.uma.api.validations.UserValidations@6272c96f]" name="validateGetUser" class="org.uma.api.validations.UserValidations"/>
-        <method signature="UserValidations.validateUpdateUser()[pri:3, instance:org.uma.api.validations.UserValidations@6272c96f]" name="validateUpdateUser" class="org.uma.api.validations.UserValidations"/>
-        <method signature="UserValidations.validateDeleteUser()[pri:4, instance:org.uma.api.validations.UserValidations@6272c96f]" name="validateDeleteUser" class="org.uma.api.validations.UserValidations"/>
-      </group> <!-- regression -->
       <group name="sanity">
-        <method signature="UserValidations.validatePostUser()[pri:1, instance:org.uma.api.validations.UserValidations@6272c96f]" name="validatePostUser" class="org.uma.api.validations.UserValidations"/>
+        <method signature="AuthValidations.validLogin()[pri:1, instance:org.uma.api.validations.Ecommerce.AuthValidations@4443ef6f]" name="validLogin" class="org.uma.api.validations.Ecommerce.AuthValidations"/>
       </group> <!-- sanity -->
-      <group name="UserAPI">
-        <method signature="UserValidations.validatePostUser()[pri:1, instance:org.uma.api.validations.UserValidations@6272c96f]" name="validatePostUser" class="org.uma.api.validations.UserValidations"/>
-        <method signature="UserValidations.validateGetUser()[pri:2, instance:org.uma.api.validations.UserValidations@6272c96f]" name="validateGetUser" class="org.uma.api.validations.UserValidations"/>
-        <method signature="UserValidations.validateUpdateUser()[pri:3, instance:org.uma.api.validations.UserValidations@6272c96f]" name="validateUpdateUser" class="org.uma.api.validations.UserValidations"/>
-        <method signature="UserValidations.validateDeleteUser()[pri:4, instance:org.uma.api.validations.UserValidations@6272c96f]" name="validateDeleteUser" class="org.uma.api.validations.UserValidations"/>
-      </group> <!-- UserAPI -->
+      <group name="LoginAPI">
+        <method signature="AuthValidations.validLogin()[pri:1, instance:org.uma.api.validations.Ecommerce.AuthValidations@4443ef6f]" name="validLogin" class="org.uma.api.validations.Ecommerce.AuthValidations"/>
+      </group> <!-- LoginAPI -->
     </groups>
-    <test started-at="2025-03-29T19:04:06 IST" name="Test1" finished-at="2025-03-29T19:04:17 IST" duration-ms="11009">
-      <class name="org.uma.api.validations.UserValidations">
-        <test-method is-config="true" signature="setupTestData()[pri:0, instance:org.uma.api.validations.UserValidations@6272c96f]" started-at="2025-03-29T19:04:06 IST" name="setupTestData" finished-at="2025-03-29T19:04:06 IST" duration-ms="250" status="PASS">
+    <test started-at="2025-03-30T13:48:52 IST" name="Default test" finished-at="2025-03-30T13:48:54 IST" duration-ms="2410">
+      <class name="org.uma.api.validations.Ecommerce.AuthValidations">
+        <test-method signature="validLogin()[pri:1, instance:org.uma.api.validations.Ecommerce.AuthValidations@4443ef6f]" started-at="2025-03-30T13:48:52 IST" name="validLogin" description="Validate creating a new user" finished-at="2025-03-30T13:48:54 IST" duration-ms="2342" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- setupTestData -->
-        <test-method signature="validatePostUser()[pri:1, instance:org.uma.api.validations.UserValidations@6272c96f]" started-at="2025-03-29T19:04:06 IST" name="validatePostUser" description="Validate creating a new user" finished-at="2025-03-29T19:04:10 IST" duration-ms="3626" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- validatePostUser -->
-        <test-method signature="validateGetUser()[pri:2, instance:org.uma.api.validations.UserValidations@6272c96f]" started-at="2025-03-29T19:04:10 IST" name="validateGetUser" description="Validate retrieving a user" finished-at="2025-03-29T19:04:11 IST" duration-ms="1651" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- validateGetUser -->
-        <test-method signature="validateUpdateUser()[pri:3, instance:org.uma.api.validations.UserValidations@6272c96f]" started-at="2025-03-29T19:04:11 IST" name="validateUpdateUser" description="Validate updating a user" finished-at="2025-03-29T19:04:15 IST" duration-ms="3630" status="FAIL">
-          <exception class="java.lang.AssertionError">
-            <message>
-              <![CDATA[expected [Kaycee] but found [Felipe]]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[java.lang.AssertionError: expected [Kaycee] but found [Felipe]
-at org.testng.Assert.fail(Assert.java:111)
-at org.testng.Assert.failNotEquals(Assert.java:1590)
-at org.testng.Assert.assertEqualsImpl(Assert.java:150)
-at org.testng.Assert.assertEquals(Assert.java:132)
-at org.testng.Assert.assertEquals(Assert.java:656)
-at org.testng.Assert.assertEquals(Assert.java:666)
-at org.uma.api.validations.UserValidations.validateUpdateUser(UserValidations.java:71)
-at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
-at java.base/java.lang.reflect.Method.invoke(Method.java:580)
-at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
-at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:687)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
-at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
-at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:995)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
-at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
-at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
-at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
-at org.testng.TestRunner.privateRun(TestRunner.java:741)
-at org.testng.TestRunner.run(TestRunner.java:616)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
-at org.testng.SuiteRunner.run(SuiteRunner.java:312)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
-at org.testng.TestNG.runSuites(TestNG.java:1112)
-at org.testng.TestNG.run(TestNG.java:1079)
-at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
-at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
-]]>
-            </full-stacktrace>
-          </exception> <!-- java.lang.AssertionError -->
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- validateUpdateUser -->
-        <test-method signature="validateDeleteUser()[pri:4, instance:org.uma.api.validations.UserValidations@6272c96f]" started-at="2025-03-29T19:04:15 IST" name="validateDeleteUser" description="Validate deleting a user" finished-at="2025-03-29T19:04:17 IST" duration-ms="1502" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- validateDeleteUser -->
-      </class> <!-- org.uma.api.validations.UserValidations -->
-    </test> <!-- Test1 -->
-  </suite> <!-- Suite -->
+        </test-method> <!-- validLogin -->
+      </class> <!-- org.uma.api.validations.Ecommerce.AuthValidations -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
 </testng-results>
