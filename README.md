@@ -2,47 +2,6 @@
 
 This repository contains an API automation framework for testing user-related endpoints.
 
-## Project Structure
-
-The project is structured as follows, based on your provided preview:
-**
-api-automation-framework/
-├── src/
-│   ├── main/
-│   │   ├── java/
-│   │   │   └── org/uma/api/
-│   │   │       ├── dto/
-│   │   │       │   └── UserDto.java          # Data Transfer Object for User
-│   │   │       ├── endpoints/
-│   │   │       │   └── UserEndpoints.java    # API endpoint definitions
-│   │   │       ├── models/
-│   │   │       │   └── User.java             # Model class for User
-│   │   │       ├── services/
-│   │   │       │   └── UserService.java        # Service class for API interactions
-│   │   │       ├── utils/
-│   │   │       │   ├── ConfigurationManager.java # Configuration handling
-│   │   │       │   ├── CustomAssertions.java    # Custom assertions
-│   │   │       │   ├── DatabaseSetupManager.java # Database setup
-│   │   │       │   ├── DataGenerator.java       # Data generation utilities
-│   │   │       │   ├── ExcelReader.java       # Excel data reading utilities
-│   │   │       │   ├── JsonUtils.java         # JSON utilities
-│   │   │       │   ├── ReportManager.java     # Report generation utilities
-│   │   │       │   └── RequestSpecBuilderUtil.java # Request specification builder
-│   │   │   ├── resources/
-│   │   │   │   ├── JsonSchema/             # JSON schema files
-│   │   │   │   ├── Configuration.properties # Configuration properties
-│   │   │   │   └── extent-config.xml       # Extent report configuration
-│   │   └── test/
-│   │       ├── java/
-│   │       │   └── org/uma/api/validations/
-│   │       │       ├── UserValidations.java         # TestNG validations
-│   │       │       └── UserValidationsViaExcel.java # TestNG validations using Excel data
-│   │       ├── resources/
-│   │       │   └── ...                     # Test resources (if any)
-│   ├── target/                         # Build output
-├── pom.xml                             # Maven project configuration
-└── README.md                            # This file
-**
 
 
 
