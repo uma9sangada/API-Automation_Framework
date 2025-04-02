@@ -5,7 +5,7 @@ This repository contains an API automation framework for testing user-related en
 ## Project Structure
 
 The project is structured as follows, based on your provided preview:
-
+**
 api-automation-framework/
 ├── src/
 │   ├── main/
@@ -42,7 +42,7 @@ api-automation-framework/
 │   ├── target/                         # Build output
 ├── pom.xml                             # Maven project configuration
 └── README.md                            # This file
-
+**
 
 
 
