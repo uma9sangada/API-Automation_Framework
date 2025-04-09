@@ -47,6 +47,8 @@ public class UserValidations {
 		
 		Response response = userService.getUser(originalUser.getUsername());
 		
+		
+		
 		Assert.assertEquals(response.getStatusCode(), 200);
 		UserResponse retrievedUser = response.as(UserResponse.class);
 		Assert.assertEquals(originalUser.getUsername(), retrievedUser.getUsername());

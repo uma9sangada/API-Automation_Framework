@@ -158,8 +158,9 @@
   
  
 <profiles>
+   
    <profile>
-      <id>Regression</id>
+      <id>sanity</id>
       <build>
          <pluginManagement>
             <plugins>
@@ -178,7 +179,7 @@
       </build>
    </profile>
    <profile>
-      <id>sanity</id>
+      <id>failedsuite</id>
       <build>
          <pluginManagement>
             <plugins>
@@ -188,26 +189,7 @@
                   <version>3.2.5</version>
                   <configuration>
                      <suiteXmlFiles>
-                        <suiteXmlFile>purchase.xml</suiteXmlFile>
-                     </suiteXmlFiles>
-                  </configuration>
-               </plugin>
-            </plugins>
-         </pluginManagement>
-      </build>
-   </profile>
-   <profile>
-      <id>errorvalidation</id>
-      <build>
-         <pluginManagement>
-            <plugins>
-               <plugin>
-                  <groupId>org.apache.maven.plugins</groupId>
-                  <artifactId>maven-surefire-plugin</artifactId>
-                  <version>3.2.5</version>
-                  <configuration>
-                     <suiteXmlFiles>
-                        <suiteXmlFile>errorhandling.xml</suiteXmlFile>
+                        <suiteXmlFile>testng-failed.xml</suiteXmlFile>
                      </suiteXmlFiles>
                   </configuration>
                </plugin>

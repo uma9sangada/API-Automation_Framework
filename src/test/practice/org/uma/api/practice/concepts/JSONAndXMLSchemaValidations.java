@@ -1,4 +1,5 @@
 package org.uma.api.practice.concepts;
+import org.testng.Assert;
 import org.testng.annotations.Test;
 
 // Required to import these
@@ -22,7 +23,14 @@ public class JSONAndXMLSchemaValidations {
         RestAssured.baseURI = "http://localhost:3000";
 
         Response res = when().get("/students");
+res.then().assertThat().body(JsonSchemaValidator.matchesJsonSchema(schemaFile));
 
-        res.then().assertThat().body(JsonSchemaValidator.matchesJsonSchema(schemaFile));
+try {
+    Assert.assertEquals(res.getBody().asString(), JsonSchemaValidator.matchesJsonSchema(schemaFile));
+    System.out.println("JSON Schema validation successful!");
+} catch (AssertionError e) {
+    System.out.println("JSON Schema validation failed: " + e.getMessage());
+    throw e; //Re-throw the exception to fail the test.
+}
     }
 }

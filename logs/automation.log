@@ -1,1 +1,19 @@
-20:40:26.952 [main] INFO  org.uma.api.utils.LoggingFilterUtil - Request PayLoad:[B@7aa01bd9
+19:33:41.992 [main] INFO  org.uma.api.utils.LoggingFilterUtil - STATUS CODE:200
+19:33:41.996 [main] INFO  org.uma.api.utils.LoggingFilterUtil - Response Header :Date=Mon, 07 Apr 2025 14:03:42 GMT
+Content-Type=application/json
+Transfer-Encoding=chunked
+Connection=close
+Access-Control-Allow-Origin=*
+Access-Control-Allow-Methods=GET, POST, DELETE, PUT
+Access-Control-Allow-Headers=Content-Type, api_key, Authorization
+Server=Jetty(9.2.9.v20150224)
+19:33:41.997 [main] INFO  org.uma.api.utils.LoggingFilterUtil - Request Body:{
+    "id": 9223372036854765299,
+    "username": "mayme.turner",
+    "firstName": "Alison",
+    "lastName": "Heller",
+    "email": "gino.waters@hotmail.com",
+    "password": "38u4nsjhlb",
+    "phone": "(376) 807-9755",
+    "userStatus": 0
+}

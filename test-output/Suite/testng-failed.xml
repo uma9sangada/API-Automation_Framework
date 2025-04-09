@@ -9,6 +9,7 @@
       <class name="org.uma.api.validations.UserValidations">
         <methods>
           <include name="setupTestData"/>
+          <include name="validateGetUser"/>
           <include name="validateUpdateUser"/>
         </methods>
       </class> <!-- org.uma.api.validations.UserValidations -->

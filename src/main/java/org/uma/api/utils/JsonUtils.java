@@ -7,9 +7,7 @@ import com.fasterxml.jackson.databind.SerializationFeature;
 
 public class JsonUtils {
 
-	private static final ObjectMapper objectMapper = new ObjectMapper().enable(SerializationFeature.INDENT_OUTPUT); // Pretty
-	// print
-	// JSON
+	private static final ObjectMapper objectMapper = new ObjectMapper().enable(SerializationFeature.INDENT_OUTPUT); 
 
 	public static String toJson(Object object) {
 		try {

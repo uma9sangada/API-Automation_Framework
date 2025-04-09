@@ -1,0 +1,127 @@
+17:23:45.959 [main] INFO  org.uma.api.utils.LoggingFilterUtil - Request Body:<html lang="en">
+  <head>
+    <meta charset="utf-8"/>
+    <title>Error</title>
+  </head>
+  <body>
+    <pre>Cannot POST /user/</pre>
+  </body>
+</html>
+17:24:04.193 [main] INFO  org.uma.api.utils.LoggingFilterUtil - BASE URI:https://rahulshettyacademy.com/api/ecom
+17:24:04.193 [main] INFO  org.uma.api.utils.LoggingFilterUtil - Request Header:Accept=*/*
+Content-Type=application/json
+17:24:04.193 [main] INFO  org.uma.api.utils.LoggingFilterUtil - Request PayLoad:{"id":0,"username":"alline.mayer","firstName":"Caprice","lastName":"Cummerata","email":"delmar.nader@yahoo.com","password":"ipkm9sdmi","phone":"320.559.6282","userStatus":0}
+17:24:04.195 [main] INFO  org.uma.api.utils.LoggingFilterUtil - BASE URI:https://rahulshettyacademy.com/api/ecom
+17:24:04.203 [main] INFO  org.uma.api.utils.LoggingFilterUtil - Request Header:Accept=*/*
+Content-Type=application/json
+17:24:04.203 [main] INFO  org.uma.api.utils.LoggingFilterUtil - Request PayLoad:{"id":0,"username":"alline.mayer","firstName":"Caprice","lastName":"Cummerata","email":"delmar.nader@yahoo.com","password":"ipkm9sdmi","phone":"320.559.6282","userStatus":0}
+17:24:04.421 [main] INFO  org.uma.api.utils.LoggingFilterUtil - STATUS CODE:404
+17:24:04.421 [main] INFO  org.uma.api.utils.LoggingFilterUtil - Response Header :Date=Sun, 06 Apr 2025 11:54:03 GMT
+Server=Apache/2.4.52 (Ubuntu)
+Content-Security-Policy=default-src 'none'
+X-DNS-Prefetch-Control=off
+Expect-CT=max-age=0
+X-Frame-Options=SAMEORIGIN
+Strict-Transport-Security=max-age=15552000; includeSubDomains
+X-Download-Options=noopen
+X-Content-Type-Options=nosniff
+X-Permitted-Cross-Domain-Policies=none
+Referrer-Policy=no-referrer
+X-XSS-Protection=0
+Access-Control-Allow-Origin=*
+Content-Type=text/html; charset=utf-8
+Content-Length=156
+Vary=Accept-Encoding
+Keep-Alive=timeout=5, max=100
+Connection=Keep-Alive
+17:24:04.425 [main] INFO  org.uma.api.utils.LoggingFilterUtil - Request Body:<html lang="en">
+  <head>
+    <meta charset="utf-8"/>
+    <title>Error</title>
+  </head>
+  <body>
+    <pre>Cannot GET /user/alline.mayer</pre>
+  </body>
+</html>
+17:24:04.425 [main] INFO  org.uma.api.utils.LoggingFilterUtil - STATUS CODE:404
+17:24:04.425 [main] INFO  org.uma.api.utils.LoggingFilterUtil - Response Header :Date=Sun, 06 Apr 2025 11:54:03 GMT
+Server=Apache/2.4.52 (Ubuntu)
+Content-Security-Policy=default-src 'none'
+X-DNS-Prefetch-Control=off
+Expect-CT=max-age=0
+X-Frame-Options=SAMEORIGIN
+Strict-Transport-Security=max-age=15552000; includeSubDomains
+X-Download-Options=noopen
+X-Content-Type-Options=nosniff
+X-Permitted-Cross-Domain-Policies=none
+Referrer-Policy=no-referrer
+X-XSS-Protection=0
+Access-Control-Allow-Origin=*
+Content-Type=text/html; charset=utf-8
+Content-Length=156
+Vary=Accept-Encoding
+Keep-Alive=timeout=5, max=100
+Connection=Keep-Alive
+17:24:04.428 [main] INFO  org.uma.api.utils.LoggingFilterUtil - Request Body:<html lang="en">
+  <head>
+    <meta charset="utf-8"/>
+    <title>Error</title>
+  </head>
+  <body>
+    <pre>Cannot GET /user/alline.mayer</pre>
+  </body>
+</html>
+17:24:04.454 [main] INFO  org.uma.api.utils.LoggingFilterUtil - BASE URI:https://rahulshettyacademy.com/api/ecom
+17:24:04.454 [main] INFO  org.uma.api.utils.LoggingFilterUtil - Request Header:Accept=*/*
+Content-Type=application/json
+17:24:04.454 [main] INFO  org.uma.api.utils.LoggingFilterUtil - Request PayLoad:{
+  "id" : 0,
+  "username" : "alline.mayer",
+  "firstName" : "Tommy",
+  "lastName" : "Cummerata",
+  "email" : "jermaine.dibbert@gmail.com",
+  "password" : "ipkm9sdmi",
+  "phone" : "320.559.6282",
+  "userStatus" : 0
+}
+17:24:04.456 [main] INFO  org.uma.api.utils.LoggingFilterUtil - BASE URI:https://rahulshettyacademy.com/api/ecom
+17:24:04.456 [main] INFO  org.uma.api.utils.LoggingFilterUtil - Request Header:Accept=*/*
+Content-Type=application/json
+17:24:04.456 [main] INFO  org.uma.api.utils.LoggingFilterUtil - Request PayLoad:{
+  "id" : 0,
+  "username" : "alline.mayer",
+  "firstName" : "Tommy",
+  "lastName" : "Cummerata",
+  "email" : "jermaine.dibbert@gmail.com",
+  "password" : "ipkm9sdmi",
+  "phone" : "320.559.6282",
+  "userStatus" : 0
+}
+17:24:04.635 [main] INFO  org.uma.api.utils.LoggingFilterUtil - STATUS CODE:404
+17:24:04.635 [main] INFO  org.uma.api.utils.LoggingFilterUtil - Response Header :Date=Sun, 06 Apr 2025 11:54:03 GMT
+Server=Apache/2.4.52 (Ubuntu)
+Content-Security-Policy=default-src 'none'
+X-DNS-Prefetch-Control=off
+Expect-CT=max-age=0
+X-Frame-Options=SAMEORIGIN
+Strict-Transport-Security=max-age=15552000; includeSubDomains
+X-Download-Options=noopen
+X-Content-Type-Options=nosniff
+X-Permitted-Cross-Domain-Policies=none
+Referrer-Policy=no-referrer
+X-XSS-Protection=0
+Access-Control-Allow-Origin=*
+Content-Type=text/html; charset=utf-8
+Content-Length=156
+Vary=Accept-Encoding
+Keep-Alive=timeout=5, max=100
+Connection=Keep-Alive
+17:24:04.638 [main] INFO  org.uma.api.utils.LoggingFilterUtil - Request Body:<html lang="en">
+  <head>
+    <meta charset="utf-8"/>
+    <title>Error</title>
+  </head>
+  <body>
+    <pre>Cannot PUT /user/alline.mayer</pre>
+  </body>
+</html>
